@@ -379,7 +379,7 @@ class OmniInference:
             download_model(ckpt_dir)
         self.fabric, self.model, self.text_tokenizer, self.snacmodel, self.whispermodel = load_model(ckpt_dir, device)
 
-    def warm_up(self, sample='./data/samples/output1.wav'):
+    def warm_up(self, sample='mini-omni/data/samples/output1.wav'):
         for _ in self.run_AT_batch_stream(sample):
             pass
 
@@ -519,8 +519,8 @@ def test_infer():
 
     # prepare test data
     # TODO
-    test_audio_list = sorted(os.listdir('./data/samples'))
-    test_audio_list = [os.path.join('./data/samples', path) for path in test_audio_list]
+    test_audio_list = sorted(os.listdir('mini-omni/data/samples'))
+    test_audio_list = [os.path.join('mini-omni/data/samples', path) for path in test_audio_list]
     test_audio_transcripts = [
         "What is your name?",
         "what are your hobbies?",
