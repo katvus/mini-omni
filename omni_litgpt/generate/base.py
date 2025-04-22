@@ -6,7 +6,7 @@ import torch
 # import torch._dynamo.config
 # import torch._inductor.config
 
-from litgpt.model import GPT
+from omni_litgpt.model import GPT
 from utils.snac_utils import layershift, snac_config
 from tqdm import tqdm
 

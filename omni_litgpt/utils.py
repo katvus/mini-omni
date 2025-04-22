@@ -37,7 +37,7 @@ from torch.serialization import normalize_storage_type
 from typing_extensions import Self
 
 if TYPE_CHECKING:
-    from litgpt import GPT, Config
+    from omni_litgpt import GPT, Config
 
 
 def init_out_dir(out_dir: Path) -> Path:

@@ -3,11 +3,11 @@ import lightning as L
 import torch
 import time
 from snac import SNAC
-from litgpt import Tokenizer
-from litgpt.utils import (
+from omni_litgpt import Tokenizer
+from omni_litgpt.utils import (
     num_parameters,
 )
-from litgpt.generate.base import (
+from omni_litgpt.generate.base import (
     generate_AA,
     generate_ASR,
     generate_TA,
@@ -17,7 +17,7 @@ from litgpt.generate.base import (
     next_token_batch
 )
 import soundfile as sf
-from litgpt.model import GPT, Config
+from omni_litgpt.model import GPT, Config
 from lightning.fabric.utilities.load import _lazy_load as lazy_load
 from utils.snac_utils import layershift, reconscruct_snac, reconstruct_tensors, get_time_str
 from utils.snac_utils import get_snac, generate_audio_data
